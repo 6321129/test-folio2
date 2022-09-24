@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Portfolio
+    </title>
+    <style>
+      
+      html{
+        margin: 0;
+        padding: 0;
+      }
+      
+      header{
+        Width: 100vw;
+        height: 74px;
+        position: scroll;
+        top: 0;
+        background-color: white;
+        border-bottom: 1px solid red;
+        z-index: 1;
+      }
+      
+      nav{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .nav-link{
+        text-transform: uppercase;
+        color: orange;
+        font: 20px sans-serif;
+      }
+      
+      .nav-link:hover{
+        transform: scale(1.1);
+        font-weight: bold;
+        border-radius: 25px;
+        background-color: orange;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        border: 1px solid orange;
+        color: black;
+      }
+      
+      body{
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 13pt;
+        background-color: #efefef;
+        padding: 10px;
+        margin: 0;
+      }
+      
+      h1{
+        font-size: 15pt;
+        color: orange;
+        text-align: center;
+        padding: 18px;
+        margin: 10px;
+      }
+      
+      h1 span{
+        border: 1px solid orangered;
+        padding: 10px;
+      }
+      
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      
+      .img-circle{
+        border: 3px solid white;
+        border-radius: 50%;
+      }
+      
+      .section{
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius; 10px;
+      }
+      
+      #header{
+        background-image: url("https://uploads-ssl.webflow.com/5e4dfa5d58d02b574c094981/5e61b936452770f1cc437223_Render%20Engine%20Blur.jpg");
+        background-size: cover;
+      }
+      
+      #header img{
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+      
+      #header p{
+        font-size: 25pt;
+        color: orange;
+        padding-top: 5px;
+        margin: 0;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .selection{
+        Background-color: #f36f48;
+        font-weight: bold;
+        color: white;
+      }
+      
+      .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1rem -1rem;
+      }
+      
+      .gallery-item{
+        flex: 24rem;
+        margin: 1rem;
+        box-shadow: 0.3rem 0.4rem 0.4rem rgba(0,0,0,0.4);
+        overflow: hidden;
+      }
+      
+      .gallery-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 500ms ease-out;
+        opacity: 100%;
+      }
+      
+      .gallery-image:hover{
+        transform: scale(1.15);
+        opacity: 90%;
+      }
+      
+      li{
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      
+      progress{
+        width: 70%;
+        height: 15px;
+        color: orange;
+        background: #000;
+      }
+      
+      hr{
+        border: 0;
+        height: 1px;
+        background: #f36f48;
+      }
+      
+      form{
+        text-align: center;
+        margin-top; 0:
+      }
+      
+      .submit{
+        background-color: orange;
+        padding: 12px 55px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        margin: 0;
+        font-weight: bold;
+      }
+      
+      .submit:hover{
+        transform: scale(1.1);
+        background-color: red;
+      }
+      
+      textarea{
+        height:100px;
+      }
+      
+      input, textarea{
+        margin-bottom: 10px;
+        font-size: 11pt;
+        padding: 15px 10px 10px;
+        border: 1px solid #cecece;
+        background-color: #efefef;
+        color: #787575;
+        border-radius: 5px;
+        width: 70%;
+        outline: none;
+      }
+      
+      .face{
+        transform: scale(o.4);
+        margin: 0 auto;
+        display: block;
+        Margin-top; -35px;
+        margin-bottom: -25px;
+      }
+      
+      #contacts img{
+        height: 50px;
+        width: 50px;
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+      
+      #contacts a{
+        text-decoration: none;
+      }
+      
+      #contacts img:hover{
+        opacity: 0.8;
+      }
+      
+      #contacts{
+        text-align: center;
+      }
+      
+      .copyright{
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <nav id="navbar">
+        <a href="#" class="nav-link">About Me</a>
+        <a href="#work" class="nav-link">My Projects</a>
+        <a href="#skills" class="nav-link">My Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+    
+    <div id="header" class="section">
+      <img alt="" class="img-circle" src="data:image/jpeg;base64,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">
+      <p>
+        Jack Hill
+      </p>
+    </div>
+    
+    <div class="section">
+      <h1 id=#><span>About Me</span></h1>
+      <p>
+        Heyl I'm <b>student</b>. fill up this paragraph tag with details, such as your name, school, class and other important information that concerns you by removing the dummy content below. <em>Lorem Ipsum is simply the dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em>
+      </p>
+    </div>
+    
+    <div class="section">
+      <h1 id=work><span>My Projects</span></h1>
+      
+      <div class="gallery">
+        
+        <div class="gallery-item">
+          <a href="https://seischool.com/">
+          <img class="gallery-image" src="https://c1.wallpaperflare.com/preview/204/690/328/coffee-note-book-cup-notebook.jpg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+            </a>
+        </div>
+        
+        <div class="gallery-item">
+
+          <a href="https://www.google.co.in/">
+          <img class="gallery-image" src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/hxpsx464zm5muaiw1hjj163c70z1_NACEO-11-24-01-San-Francisco.jpeg" alt="sunset behind San Francisco city skyline">
+          </a>
+        </div>
+        
+        <div class="gallery-item">
+          <a href="https://seischool.com/" href="https://www.google.co.in/">
+          <img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+          </a>
+        </div>
+        
+        <div class="gallery-item">
+          <a href="https://www.google.co.in/">
+          <img class="gallery-image" src="https://c1.wallpaperflare.com/preview/177/94/534/road-exit-drive-windshield.jpg" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+          <\a>
+        </div>
+        
+        <div class="gallery-item">
+          <a href="https://seischool.com/">
+          <img class="gallery-image" src="https://cdn.pixabay.com/photo/2018/10/17/05/50/view-3753184_1280.jpg" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+          </a>
+        </div>
+        
+        <div class="gallery-item">
+          <a href="https://www.google.co.in/">
+          <img class="gallery-image" src="https://www.guitarchords247.com/wp-content/uploads/2017/03/Best-Beginner-Electric-Guita.jpg" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="section">
+      <h1 id=skills><span>My Skills</span></h1>
+      <ul>
+        
+        <li>
+          HTML
+          <br>
+          <progress min="0" max="100" value="80"></progress>
+        </li>
+        
+        <li>
+          CSS
+          <br>
+          <progress min="0" max="100" value="75"></progress>
+        </li>
+        
+        <li>
+          C++
+          <br>
+          <progress min="0" max="100" value="50"></progress>
+        </li>
+        
+        <li>
+          C programming
+          <br>
+          <progress min="0" max="100" value="65"></progress>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h1 id=contact><span>Contact Me</span></h1>
+      
+      <form action="dhyanamjoshiseischool@gmail.com" method="post" enctype="text/plain">
+        <input name="name" placeholder="Name" type="text" required/>
+        <br/>
+        <input name="email" placeholder="Email" type="email" required/>
+        <br/>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <br>
+        <input type="submit" Value="SEND" class="submit"/>
+      </form>
+      
+    </div>
+    
+    <div class="section" id="contacts">
+      <h1><span>Follow Me</span></h1>
+      <div>
+        
+        <a href="http://facebook.com/">
+          <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png">
+        </a>
+        
+        <a href="http://twitter.com/">
+          <img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png">
+        </a>
+        
+      </div>
+    </div>
+    
+    <div class="copyright">
+      &copy;2022 A sincere web developer. All rights reserved
+    </div>
+    
+  </body>
+</html>
